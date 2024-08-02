@@ -26,7 +26,17 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin="" />
 </head>
+<style>
+#mapid {
+    height: 300px;
+    width: 100%;
+}
+</style>
+
 
 <body class="index-page">
 
@@ -305,9 +315,11 @@
 
     </section><!-- /Pricing Section -->
 
+    
     <!-- Faq Section -->
     <section id="faq" class="faq section">
       <!-- Section Title -->
+      
       <div class="container section-title" data-aos="fade-up">
         <h2>Manfaat Merawat AC Anda</h2>
       </div><!-- End Section Title -->
@@ -433,12 +445,6 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
-        
-        </div>
-        <div class="col-md-6 col-lg-3 pl-lg-5">
-          
-        </div>
-        <div class="col-md-6 col-lg-3 pl-lg-5">
           <div class="widget">
             <h3 class="widget-heading">Kontak Kami</h3>
             <ul class="list-unstyled footer-blog-entry">
@@ -448,10 +454,13 @@
               </li>
               <li>
                 <span class="d-block date">Alamat</span>
-                <a href="#">Kapas Madya IIF No.7, Gading, Kec. Tambaksari, Surabaya, Jawa Timur 60134</a>
+                Kapas Madya IIF No.7, Gading, Kec. Tambaksari, Surabaya, Jawa Timur 60134
               </li>
             </ul>
           </div>
+        </div>
+        <div class="col-md-6">
+          <div id="mapid"></div>
 
         </div>
       </div>
@@ -459,6 +468,24 @@
       <!-- Made by Laildev -->
     </div>
   </footer>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  <script>
+    var mymap = L.map('mapid').setView([-7.237988, 112.7678757], 17);
+    var marker = L.marker([-7.237988, 112.7678757]).addTo(mymap);
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'pk.eyJ1IjoiZmFyaXNxbGFpbCIsImEiOiJja28zeXAwb3owdWE4MnVscnlwc29idnY3In0.IBa0y_xJQDGHdsjY4DrgXQ'
+    }).addTo(mymap);
+
+  </script>
 
   <!-- Scroll Top -->
   <a href="https://wa.me/+62 81323328565" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></i></a>
