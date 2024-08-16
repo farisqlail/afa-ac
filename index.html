@@ -534,6 +534,8 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
+        </div>
+        <div class="col-md-6">
           <div class="widget">
             <h3 class="widget-heading">Kontak Kami</h3>
             <ul class="list-unstyled footer-blog-entry">
@@ -550,39 +552,22 @@
                 <a href="#">8.00 - 18.00</a>
               </li>
               <li>
-                <span class="d-block date">Alamat</span>
-                Kapas Madya IIF No.7, Gading, Kec. Tambaksari, Surabaya, Jawa Timur 60134
+                <a href="https://www.google.com/maps/place/Kapas+Madya+IIF+No.7,+Gading,+Kec.+Tambaksari,+Surabaya,+Jawa+Timur+60137/@-7.237988,112.7652954,850m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2dd7f9a689cbd2bf:0x25318661cb6350ce!8m2!3d-7.237988!4d112.7678757!16s%2Fg%2F11c18z3q6y?entry=ttu" target="_blank">
+                  <span class="d-block date">Alamat</span>
+                  <u>
+                    <svg viewBox="0 0 24 24" width="28px" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#059652" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#059652" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> Kapas Madya IIF No.7, Gading, Kec. Tambaksari, Surabaya, Jawa Timur 60134
+                  </u>
+                </a>
               </li>
             </ul>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div id="mapid"></div>
+          <!-- <div id="mapid"></div> -->
         </div>
       </div>
 
       <!-- Made by Laildev -->
     </div>
   </footer>
-
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin=""></script>
-  <script>
-    var mymap = L.map('mapid').setView([-7.237988, 112.7678757], 17);
-    var marker = L.marker([-7.237988, 112.7678757]).addTo(mymap).bindPopup(`<a href="https://www.google.com/maps/place/Kapas+Madya+IIF+No.7,+Gading,+Kec.+Tambaksari,+Surabaya,+Jawa+Timur+60137/@-7.237988,112.7652954,850m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2dd7f9a689cbd2bf:0x25318661cb6350ce!8m2!3d-7.237988!4d112.7678757!16s%2Fg%2F11c18z3q6y?entry=ttu" target="_blank" align="center">Kapas Madya IIF No.7</a>`)
-    .openPopup();
-
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-      maxZoom: 18,
-      id: 'mapbox/streets-v11',
-      tileSize: 512,
-      zoomOffset: -1,
-      accessToken: 'pk.eyJ1IjoiZmFyaXNxbGFpbCIsImEiOiJja28zeXAwb3owdWE4MnVscnlwc29idnY3In0.IBa0y_xJQDGHdsjY4DrgXQ'
-    }).addTo(mymap);
-
-  </script>
 
   <!-- Scroll Top -->
   <a href="https://wa.me/+62 81323328565" class="scroll-top d-flex align-items-center justify-content-center"><i
