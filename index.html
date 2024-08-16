@@ -10,6 +10,10 @@
     name="description">
   <meta content="afa jaya teknik" name="keywords">
 
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -115,7 +119,7 @@
               untuk kesuksesan bersama dan pertumbuhan berkelanjutan.
             </p>
             <p class="mt-5" data-aos="fade-up">
-              <a href="https://wa.me/6281323328565" class="btn btn-get-started">Kontak Kami</a>
+              <a href="https://wa.me/+62 81323328565" class="btn btn-get-started">Kontak Kami</a>
             </p>
           </div>
         </div>
@@ -308,7 +312,7 @@
 
               <h4><sup>Rp</sup>80.000<span> / 2 PK</span></h4>
               <div class="btn-wrap">
-                <a href="https://wa.me/6281323328565" target="_blank" class="btn-buy">Order Whatsapp</a>
+                <a href="https://wa.me/+62 81323328565" target="_blank" class="btn-buy">Order Whatsapp</a>
               </div>
             </div>
           </div><!-- End Pricing Item -->
@@ -346,7 +350,7 @@
 
               <h4><sup>Rp</sup>375.000<span> / 2 PK</span></h4>
               <div class="btn-wrap">
-                <a href="https://wa.me/6281323328565" target="_blank" class="btn-buy">Order Whatsapp</a>
+                <a href="https://wa.me/+62 81323328565" target="_blank" class="btn-buy">Order Whatsapp</a>
               </div>
             </div>
           </div><!-- End Pricing Item -->
@@ -360,7 +364,7 @@
               <h3>Bongkar Saja</h3>
               <h4><sup>Rp</sup>100.000</h4>
               <div class="btn-wrap">
-                <a href="https://wa.me/6281323328565" target="_blank" class="btn-buy">Order Whatsapp</a>
+                <a href="https://wa.me/+62 81323328565" target="_blank" class="btn-buy">Order Whatsapp</a>
               </div>
             </div>
           </div><!-- End Pricing Item -->
@@ -371,7 +375,7 @@
               <h4><sup>Rp</sup>300.000<span> / 0,5 - 1 PK</span></h4>
               <h4><sup>Rp</sup>400.000<span> / 2 PK</span></h4>
               <div class="btn-wrap">
-                <a href="https://wa.me/6281323328565" target="_blank" class="btn-buy">Order Whatsapp</a>
+                <a href="https://wa.me/+62 81323328565" target="_blank" class="btn-buy">Order Whatsapp</a>
               </div>
             </div>
           </div><!-- End Pricing Item -->
@@ -530,14 +534,12 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
-        </div>
-        <div class="col-md-6">
           <div class="widget">
             <h3 class="widget-heading">Kontak Kami</h3>
             <ul class="list-unstyled footer-blog-entry">
               <li>
                 <span class="d-block date">Whatsapp</span>
-                <a href="https://wa.me/6281323328565"><u>+62 813-2332-8565</u></a>
+                <a href="https://wa.me/+62 81323328565"><u>+62 813-2332-8565</u></a>
               </li>
               <li>
                 <span class="d-block date">Telepon</span>
@@ -549,10 +551,13 @@
               </li>
               <li>
                 <span class="d-block date">Alamat</span>
-                <a href="https://www.google.com/maps/place/Kapas+Madya+IIF+No.7,+Gading,+Kec.+Tambaksari,+Surabaya,+Jawa+Timur+60137/@-7.237988,112.7652954,850m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2dd7f9a689cbd2bf:0x25318661cb6350ce!8m2!3d-7.237988!4d112.7678757!16s%2Fg%2F11c18z3q6y?entry=ttu" target="_blank"><u>Kapas Madya IIF No.7, Gading, Kec. Tambaksari, Surabaya, Jawa Timur 60134</u></a>
+                Kapas Madya IIF No.7, Gading, Kec. Tambaksari, Surabaya, Jawa Timur 60134
               </li>
             </ul>
           </div>
+        </div>
+        <div class="col-md-6">
+          <div id="mapid"></div>
         </div>
       </div>
 
@@ -560,8 +565,27 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <script>
+    var mymap = L.map('mapid').setView([-7.237988, 112.7678757], 17);
+    var marker = L.marker([-7.237988, 112.7678757]).addTo(mymap).bindPopup(`<a href="https://www.google.com/maps/place/Kapas+Madya+IIF+No.7,+Gading,+Kec.+Tambaksari,+Surabaya,+Jawa+Timur+60137/@-7.237988,112.7652954,850m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2dd7f9a689cbd2bf:0x25318661cb6350ce!8m2!3d-7.237988!4d112.7678757!16s%2Fg%2F11c18z3q6y?entry=ttu" target="_blank" align="center">Kapas Madya IIF No.7</a>`)
+    .openPopup();
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1,
+      accessToken: 'pk.eyJ1IjoiZmFyaXNxbGFpbCIsImEiOiJja28zeXAwb3owdWE4MnVscnlwc29idnY3In0.IBa0y_xJQDGHdsjY4DrgXQ'
+    }).addTo(mymap);
+
+  </script>
+
   <!-- Scroll Top -->
-  <a href="https://wa.me/6281323328565" class="scroll-top d-flex align-items-center justify-content-center"><i
+  <a href="https://wa.me/+62 81323328565" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-whatsapp"></i></i></a>
 
   <!-- Preloader -->
